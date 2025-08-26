@@ -34,7 +34,19 @@ laravel-app/
 docker compose up -d --build
 ```
 
+Kalau kamu BELUM punya project Laravel
+
+Masuk ke container lalu buat project Laravel:
+
+```bash
+docker compose exec app composer create-project laravel/laravel .
+```
+
+Itu akan generate composer.json + semua file Laravel di dalam volume ./.
+
 ### 2. Install Dependencies PHP di dalam Container
+
+Pastikan kamu berada di root project (tempat composer.json Laravel berada) lalu jalanin:
 
 ```bash
 docker compose exec app composer install
